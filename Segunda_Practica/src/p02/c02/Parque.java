@@ -1,4 +1,4 @@
-package p02.c01;
+package p02.c02;
 
 import java.util.Collection;
 import java.util.Hashtable;
@@ -57,8 +57,10 @@ public class Parque implements IParque{
 	public void enviarMensaje(char puerta) {
 		System.out.printf("\nEntrada al parque por puerta %c", puerta);
 		System.out.printf("\n--> Personas en el parque %d", personasTotales);
-		System.out.printf("\n----> Por puerta A %d", dict.get('A') != null ? dict.get('A') : 0);
-		System.out.printf("\n----> Por puerta B %d", dict.get('B') != null ? dict.get('B') : 0);
+		for(Character clave : dict.keySet()) {
+			System.out.printf("\n----> Por puerta %c %d", clave, dict.get(clave) != null ? dict.get(clave) : 0);
+		}
+		
 	}
 	
 	public void checkInvariante() {

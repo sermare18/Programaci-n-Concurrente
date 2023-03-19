@@ -1,4 +1,4 @@
-package p02.c01;
+package p02.c02;
 
 import java.util.Random;
 
