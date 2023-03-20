@@ -23,8 +23,19 @@ public class ActividadEntradaPuerta implements Runnable {
 	@Override
 	public void run() {
 		
+		Random random = new Random();
+        int tiempoDeEspera = random.nextInt(5 - 1 + 1) + 1; // Genera un número aleatorio entre 1 y 5
+		
 		// Entrar al parque 20 veces
 		for (int i = 0; i < NUMENTRADAS; i++) {
+			
+			try {
+				Thread.sleep(tiempoDeEspera * 1000); // Pausa la ejecución del hilo durante el tiempo de espera
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 			parque.entrarAlParque(puerta);
 		}
 		

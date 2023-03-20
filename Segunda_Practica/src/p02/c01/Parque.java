@@ -25,17 +25,6 @@ public class Parque implements IParque{
 		// Actualizar numero personas totales
 		this.personasTotales++;
 		
-		Random random = new Random();
-		int tiempoEspera = random.nextInt(5 - 1 + 1) + 1; // Genera un número aleatorio entre 1 y 5
-		
-		// Dormir el hilo 3 seg
-		try {
-			TimeUnit.MILLISECONDS.sleep(tiempoEspera * 1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 		// Inicializar claves
 		if(!dict.containsKey(puerta)) {
 			dict.put(puerta, 0);
