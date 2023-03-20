@@ -20,7 +20,7 @@ public class Parque implements IParque{
 		
 	}
 
-	public synchronized void entrarAlParque(char puerta) {
+	public void entrarAlParque(char puerta) {
 		
 		// Actualizar numero personas totales
 		this.personasTotales++;

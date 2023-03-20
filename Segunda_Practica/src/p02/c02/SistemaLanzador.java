@@ -11,7 +11,7 @@ public class SistemaLanzador {
 	public static void main(String[] args) {
 		
 		// Variables (Parque)
-		Parque parque = new Parque();
+		IParque parque = AdaptadorParqueSincronizado.getInstancia();
 		
 		// Crear arreglo de hilos
 		Thread[] hilos = new Thread[NUM_HILOS];
